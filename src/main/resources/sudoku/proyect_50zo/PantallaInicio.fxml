@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane style="-fx-background-color: #0a3d0a;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sudoku.proyect_50zo.CONTROLLER.PantallaInicioController">
+
+    <VBox alignment="CENTER" spacing="10" style="-fx-padding: 30 40 30 40;">
+
+        <Label alignment="CENTER" maxWidth="Infinity" style="-fx-font-size: 38px; -fx-font-weight: bold; -fx-text-fill: #f5c518; -fx-font-family: 'Impact';" text="EL CINCUENTAZO" />
+
+        <Label alignment="CENTER" maxWidth="Infinity" style="-fx-font-size: 12px; -fx-text-fill: #c9a227; -fx-font-family: 'Courier New';" text="* JUEGO DE CARTAS *" />
+
+        <Label alignment="CENTER" maxWidth="Infinity" style="-fx-font-size: 11px; -fx-text-fill: #4caf81; -fx-font-family: 'Courier New';" text="Llega a 50 puntos exactos  ·  El que se pase pierde" />
+
+        <Label alignment="CENTER" maxWidth="Infinity" style="-fx-text-fill: #1e3e1e; -fx-font-size: 14px;" text="────────────────────────────────────────────" />
+
+        <Label alignment="CENTER" maxWidth="Infinity" style="-fx-font-size: 11px; -fx-text-fill: #888888; -fx-font-family: 'Courier New';" text="— ¿CUANTOS JUGADORES? —" />
+
+        <HBox alignment="CENTER" spacing="16" VBox.vgrow="ALWAYS">
+
+            <VBox fx:id="card1" alignment="CENTER" onMouseClicked="#elegirUno" prefHeight="160" prefWidth="190" spacing="6" style="-fx-background-color: #0f1f0f; -fx-border-color: #c9a227; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10; -fx-cursor: hand;">
+                <Label style="-fx-font-size: 48px; -fx-font-weight: bold; -fx-text-fill: #f5c518; -fx-font-family: 'Impact';" text="1" />
+                <Label style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #ffffff; -fx-font-family: 'Impact';" text="JUGADOR" />
+                <Label style="-fx-font-size: 10px; -fx-text-fill: #666666; -fx-font-family: 'Courier New';" text="vs maquina" />
+            </VBox>
+
+            <VBox fx:id="card2" alignment="CENTER" onMouseClicked="#elegirDos" prefHeight="160" prefWidth="190" spacing="6" style="-fx-background-color: #0f1f0f; -fx-border-color: #c9a227; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10; -fx-cursor: hand;">
+                <Label style="-fx-font-size: 48px; -fx-font-weight: bold; -fx-text-fill: #f5c518; -fx-font-family: 'Impact';" text="2" />
+                <Label style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #ffffff; -fx-font-family: 'Impact';" text="JUGADORES" />
+                <Label style="-fx-font-size: 10px; -fx-text-fill: #666666; -fx-font-family: 'Courier New';" text="vs dos maquinas" />
+            </VBox>
+
+            <VBox fx:id="card3" alignment="CENTER" onMouseClicked="#elegirTres" prefHeight="160" prefWidth="190" spacing="6" style="-fx-background-color: #0f1f0f; -fx-border-color: #c9a227; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10; -fx-cursor: hand;">
+                <Label style="-fx-font-size: 48px; -fx-font-weight: bold; -fx-text-fill: #f5c518; -fx-font-family: 'Impact';" text="3" />
+                <Label style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #ffffff; -fx-font-family: 'Impact';" text="JUGADORES" />
+                <Label style="-fx-font-size: 10px; -fx-text-fill: #666666; -fx-font-family: 'Courier New';" text="vs tres maquinas" />
+            </VBox>
+
+        </HBox>
+
+        <Label fx:id="labelStatus" alignment="CENTER" maxWidth="Infinity" style="-fx-font-size: 11px; -fx-text-fill: #555555; -fx-font-family: 'Courier New';" text="ninguna seleccion" />
+
+        <Button fx:id="btnIniciar" maxWidth="300" onAction="#iniciarJuego" style="-fx-background-color: #c9a227; -fx-text-fill: #0a1a00; -fx-font-size: 15px; -fx-font-weight: bold; -fx-font-family: 'Impact'; -fx-background-radius: 8; -fx-cursor: hand; -fx-padding: 12 40 12 40;" text="▶  INICIAR JUEGO" />
+
+    </VBox>
+
+</StackPane>
