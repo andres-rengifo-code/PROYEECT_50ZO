@@ -1,4 +1,4 @@
-package sudoku.proyect_50zo.CONTROLLER;
+package proyect_50zo.CONTROLLER;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
