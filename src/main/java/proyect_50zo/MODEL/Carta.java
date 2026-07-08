@@ -7,13 +7,12 @@ public class Carta {
     private String valor;
 
     //Contructor
+    //Datos necesarios: palo y valor
     public Carta(String palo, String valor) {
         this.palo = palo;
         this.valor = valor;
     }
 
-    public Carta() {
-    }
 
     //Getter and setter
     public String getPalo() {

@@ -9,7 +9,12 @@ import java.io.IOException;
 
 public class InsertScene {
 
-    public static void setScene(Stage interfaz, String paths){
+    public static Stage interfaz;
+
+    public static void setStage(Stage stage) {
+        interfaz = stage;
+    }
+    public static void setScene(String paths){
         FXMLLoader cargarInterfaz = new FXMLLoader(InsertScene.class.getResource(paths));
         try {
             Parent pane = cargarInterfaz.load();

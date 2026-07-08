@@ -4,6 +4,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.scene.input.MouseEvent;
+import proyect_50zo.UTILS.InsertScene;
+import proyect_50zo.UTILS.Paths;
 
 public class PantallaInicioController {
 
@@ -13,6 +15,12 @@ public class PantallaInicioController {
     @FXML private Label labelStatus;
 
     private int jugadoresSeleccionados = 0;
+
+    public class ConfiguracionJuego {
+
+        public static int numeroMaquinas;
+
+    }
 
     private void resetCards() {
         String estiloNormal = "-fx-background-color: #0f1f0f; -fx-border-color: #c9a227; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10; -fx-cursor: hand;";
@@ -33,6 +41,7 @@ public class PantallaInicioController {
         jugadoresSeleccionados = 1;
         labelStatus.setText("✓  1 JUGADOR VS MAQUINA");
         labelStatus.setStyle("-fx-font-size: 11px; -fx-text-fill: #4caf81; -fx-font-family: 'Courier New';");
+
     }
 
     @FXML
@@ -61,6 +70,16 @@ public class PantallaInicioController {
             return;
         }
         System.out.println("Iniciando juego con " + jugadoresSeleccionados + " jugador(es)");
-        // Aqui va la logica para cambiar de pantalla
+        ConfiguracionJuego.numeroMaquinas = jugadoresSeleccionados;
+        InsertScene.setScene(Paths.MESAJUEGO);
+
+    }
+
+    public int getJugadoresSeleccionados() {
+        return jugadoresSeleccionados;
+    }
+
+    public void setJugadoresSeleccionados(int jugadoresSeleccionados) {
+        this.jugadoresSeleccionados = jugadoresSeleccionados;
     }
 }

@@ -23,7 +23,8 @@ public class StartApp extends Application {
         stage.setMinWidth(500);
         stage.setMinHeight(400);
 
-        InsertScene.setScene(stage,Paths.INICIO);
+        InsertScene.setStage(stage);
+        InsertScene.setScene( Paths.INICIO);
 
     }
 }

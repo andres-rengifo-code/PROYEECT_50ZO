@@ -1,6 +1,7 @@
 module proyect_50zo {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.desktop;
 
 
     opens proyect_50zo to javafx.fxml;
