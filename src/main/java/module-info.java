@@ -8,4 +8,7 @@ module sudoku.proyect_50zo {
 
     exports sudoku.proyect_50zo;
     exports sudoku.proyect_50zo.CONTROLLER;
+    exports sudoku.proyect_50zo.MODEL;
+    exports sudoku.proyect_50zo.EXCEPTION;
+    exports sudoku.proyect_50zo.HILO;
 }

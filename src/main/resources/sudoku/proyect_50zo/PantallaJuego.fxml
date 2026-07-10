@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane style="-fx-background-color: #0a3d0a;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sudoku.proyect_50zo.CONTROLLER.PantallaJuegoController">
+
+    <VBox alignment="CENTER" spacing="16" style="-fx-padding: 20 30 20 30;">
+
+        <Label alignment="CENTER" maxWidth="Infinity" style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: #f5c518; -fx-font-family: 'Impact';" text="EL CINCUENTAZO" />
+
+        <!-- Oponentes (jugadores máquina) -->
+        <HBox fx:id="oponentesBox" alignment="CENTER" spacing="30" />
+
+        <Label fx:id="lblMazoRestante" alignment="CENTER" maxWidth="Infinity" style="-fx-font-size: 11px; -fx-text-fill: #888888; -fx-font-family: 'Courier New';" text="MAZO: 0" />
+
+        <!-- Mesa -->
+        <VBox alignment="CENTER" spacing="6" style="-fx-background-color: #0f1f0f; -fx-border-color: #c9a227; -fx-border-width: 2; -fx-border-radius: 12; -fx-background-radius: 12; -fx-padding: 20;">
+            <Label fx:id="lblCartaMesa" alignment="CENTER" text="—" />
+            <Label fx:id="lblSuma" alignment="CENTER" style="-fx-font-size: 13px; -fx-text-fill: #4caf81; -fx-font-family: 'Courier New';" text="SUMA MESA: 0 / 50" />
+        </VBox>
+
+        <Label fx:id="lblTurno" alignment="CENTER" maxWidth="Infinity" style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #4caf81; -fx-font-family: 'Courier New';" text="TU TURNO" />
+
+        <Label fx:id="lblMensaje" alignment="CENTER" maxWidth="Infinity" style="-fx-font-size: 11px; -fx-text-fill: #e8423a; -fx-font-family: 'Courier New';" text="" />
+
+        <Button fx:id="btnTomarCarta" onAction="#tomarCarta" style="-fx-background-color: #c9a227; -fx-text-fill: #0a1a00; -fx-font-size: 13px; -fx-font-weight: bold; -fx-font-family: 'Impact'; -fx-background-radius: 8; -fx-cursor: hand; -fx-padding: 8 30 8 30;" text="TOMAR CARTA DEL MAZO" />
+
+        <Label alignment="CENTER" maxWidth="Infinity" style="-fx-font-size: 10px; -fx-text-fill: #666666; -fx-font-family: 'Courier New';" text="— TU MANO —" />
+
+        <!-- Mano del jugador humano -->
+        <HBox fx:id="handHumanBox" alignment="CENTER" spacing="12" />
+
+    </VBox>
+
+</StackPane>
