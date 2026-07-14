@@ -6,11 +6,13 @@ module proyect_50zo {
 
     opens proyect_50zo to javafx.fxml;
     opens proyect_50zo.CONTROLLER to javafx.fxml;
-    opens proyect_50zo.UTILS to javafx.fxml;
-    opens proyect_50zo.MODEL to javafx.fxml;
+
 
     exports proyect_50zo;
     exports proyect_50zo.CONTROLLER;
-    exports proyect_50zo.UTILS;
     exports proyect_50zo.MODEL;
+    exports EXCEPCION;
+    exports proyect_50zo.HILO;
+    exports proyect_50zo.UTILS;
+
 }
