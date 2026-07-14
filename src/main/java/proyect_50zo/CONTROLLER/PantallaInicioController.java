@@ -2,84 +2,54 @@ package proyect_50zo.CONTROLLER;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
-import javafx.scene.layout.VBox;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.VBox;
 import proyect_50zo.UTILS.InsertScene;
 import proyect_50zo.UTILS.Paths;
 
-public class PantallaInicioController {
+/** HU-1: permite seleccionar 1, 2 o 3 jugadores máquina. */
 
+public class PantallaInicioController {
     @FXML private VBox card1;
     @FXML private VBox card2;
     @FXML private VBox card3;
     @FXML private Label labelStatus;
 
-    private int jugadoresSeleccionados = 0;
-
-    public class ConfiguracionJuego {
-
-        public static int numeroMaquinas;
-
-    }
+    public static int numeroMaquinas;
+    private int jugadoresSeleccionados;
 
     private void resetCards() {
-        String estiloNormal = "-fx-background-color: #0f1f0f; -fx-border-color: #c9a227; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10; -fx-cursor: hand;";
-        card1.setStyle(estiloNormal);
-        card2.setStyle(estiloNormal);
-        card3.setStyle(estiloNormal);
+        String estilo = "-fx-background-color: #0f1f0f; -fx-border-color: #c9a227; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10; -fx-cursor: hand;";
+        card1.setStyle(estilo); card2.setStyle(estilo); card3.setStyle(estilo);
     }
 
-    private void activarCard(VBox card) {
-        String estiloActivo = "-fx-background-color: #1a3a1a; -fx-border-color: #f5c518; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10; -fx-cursor: hand;";
-        card.setStyle(estiloActivo);
-    }
-
-    @FXML
-    public void elegirUno(MouseEvent event) {
+    private void seleccionar(VBox card, int cantidad, String mensaje) {
         resetCards();
-        activarCard(card1);
-        jugadoresSeleccionados = 1;
-        labelStatus.setText("✓  1 JUGADOR VS MAQUINA");
-        labelStatus.setStyle("-fx-font-size: 11px; -fx-text-fill: #4caf81; -fx-font-family: 'Courier New';");
-
-    }
-
-    @FXML
-    public void elegirDos(MouseEvent event) {
-        resetCards();
-        activarCard(card2);
-        jugadoresSeleccionados = 2;
-        labelStatus.setText("✓  1 JUGADOR VS DOS MAQUINAS");
+        card.setStyle("-fx-background-color: #1a3a1a; -fx-border-color: #f5c518; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10; -fx-cursor: hand;");
+        jugadoresSeleccionados = cantidad;
+        labelStatus.setText(mensaje);
         labelStatus.setStyle("-fx-font-size: 11px; -fx-text-fill: #4caf81; -fx-font-family: 'Courier New';");
     }
 
-    @FXML
-    public void elegirTres(MouseEvent event) {
-        resetCards();
-        activarCard(card3);
-        jugadoresSeleccionados = 3;
-        labelStatus.setText("✓  1 JUGADOR VS TRES MAQUINAS");
-        labelStatus.setStyle("-fx-font-size: 11px; -fx-text-fill: #4caf81; -fx-font-family: 'Courier New';");
-    }
+    /** Selecciona una partida contra una máquina. @param event clic de la interfaz. */
+    @FXML public void elegirUno(MouseEvent event) { seleccionar(card1, 1, "1 JUGADOR VS 1 MAQUINA"); }
 
-    @FXML
-    public void iniciarJuego() {
+    /** Selecciona una partida contra dos máquinas. @param event clic de la interfaz. */
+    @FXML public void elegirDos(MouseEvent event) { seleccionar(card2, 2, "1 JUGADOR VS 2 MAQUINAS"); }
+
+    /** Selecciona una partida contra tres máquinas. @param event clic de la interfaz. */
+    @FXML public void elegirTres(MouseEvent event) { seleccionar(card3, 3, "1 JUGADOR VS 3 MAQUINAS"); }
+
+    /**
+     * Valida la selección y abre la pantalla que prepara la partida.
+     */
+    @FXML public void iniciarJuego() {
         if (jugadoresSeleccionados == 0) {
-            labelStatus.setText("⚠  ELIGE CUANTOS JUGADORES PRIMERO");
+            labelStatus.setText("ELIGE CUANTOS JUGADORES MAQUINA QUIERES");
             labelStatus.setStyle("-fx-font-size: 11px; -fx-text-fill: #e8423a; -fx-font-family: 'Courier New';");
             return;
         }
-        System.out.println("Iniciando juego con " + jugadoresSeleccionados + " jugador(es)");
-        ConfiguracionJuego.numeroMaquinas = jugadoresSeleccionados;
+        numeroMaquinas = jugadoresSeleccionados;
         InsertScene.setScene(Paths.MESAJUEGO);
-
-    }
-
-    public int getJugadoresSeleccionados() {
-        return jugadoresSeleccionados;
-    }
-
-    public void setJugadoresSeleccionados(int jugadoresSeleccionados) {
-        this.jugadoresSeleccionados = jugadoresSeleccionados;
     }
 }

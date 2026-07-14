@@ -1,33 +1,44 @@
 package proyect_50zo.MODEL;
 
+/** Carta de una baraja estándar. */
 public class Carta {
+    
+    private final String palo;
+    private final String valor;
 
-    //Atributos de una carta
-    private String palo;
-    private String valor;
-
-    //Contructor
-    //Datos necesarios: palo y valor
+    /**
+     * Construye una carta identificada por su palo y valor.
+     *
+     * @param palo palo de la carta.
+     * @param valor valor de la carta, por ejemplo {@code A}, {@code 7} o {@code K}.
+     */
     public Carta(String palo, String valor) {
         this.palo = palo;
         this.valor = valor;
     }
 
-
-    //Getter and setter
-    public String getPalo() {
-        return palo;
+    /**
+     * Indica si la carta pertenece a un palo rojo.
+     *
+     * @return {@code true} para corazones o diamantes.
+     */
+    public boolean esRoja() {
+        return "CORAZONES".equals(palo) || "DIAMANTES".equals(palo);
     }
 
-    public void setPalo(String palo) {
-        this.palo = palo;
-    }
-
-    public String getValor() {
-        return valor;
-    }
-
-    public void setValor(String valor) {
-        this.valor = valor;
+    /**
+     * Devuelve la representación visible de la carta, con su símbolo de palo.
+     *
+     * @return texto de la carta, por ejemplo { A♠}.
+     */
+    @Override
+    public String toString() {
+        String simbolo = switch (palo) {
+            case "CORAZONES" -> "♥";
+            case "DIAMANTES" -> "♦";
+            case "TREBOLES" -> "♣";
+            default -> "♠";
+        };
+        return valor + simbolo;
     }
 }
