@@ -11,7 +11,7 @@ module proyect_50zo {
     exports proyect_50zo;
     exports proyect_50zo.CONTROLLER;
     exports proyect_50zo.MODEL;
-    exports EXCEPCION;
+    exports proyect_50zo.EXCEPCION;
     exports proyect_50zo.HILO;
     exports proyect_50zo.UTILS;
 
