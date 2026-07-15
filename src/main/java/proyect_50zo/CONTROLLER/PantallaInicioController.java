@@ -1,4 +1,4 @@
-package sudoku.proyect_50zo.CONTROLLER;
+package proyect_50zo.CONTROLLER;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -86,7 +86,7 @@ public class PantallaInicioController {
         }
 
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/sudoku/proyect_50zo/PantallaJuego.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/proyect_50zo/PantallaJuego.fxml"));
             Parent root = loader.load();
 
             PantallaJuegoController controller = loader.getController();

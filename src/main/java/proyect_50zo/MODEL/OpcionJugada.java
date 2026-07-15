@@ -1,4 +1,4 @@
-package sudoku.proyect_50zo.MODEL;
+package proyect_50zo.MODEL;
 
 /**
  * Representa una posible jugada: una carta de la mano de un jugador junto

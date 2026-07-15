@@ -1,4 +1,4 @@
-package sudoku.proyect_50zo.EXCEPTION;
+package proyect_50zo.EXCEPTION;
 
 /**
  * Excepción <b>marcada (checked)</b> propia del juego.

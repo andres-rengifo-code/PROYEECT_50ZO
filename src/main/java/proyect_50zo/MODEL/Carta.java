@@ -1,4 +1,4 @@
-package sudoku.proyect_50zo.MODEL;
+package proyect_50zo.MODEL;
 
 /**
  * Representa una carta de una baraja de póker estándar (52 cartas: A, 2-10,

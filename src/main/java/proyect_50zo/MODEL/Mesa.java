@@ -1,4 +1,4 @@
-package sudoku.proyect_50zo.MODEL;
+package proyect_50zo.MODEL;
 
 import java.util.ArrayList;
 import java.util.List;

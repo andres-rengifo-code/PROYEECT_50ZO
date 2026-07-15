@@ -60,7 +60,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>sudoku.proyect_50zo/sudoku.proyect_50zo.HelloApplication</mainClass>
+                            <mainClass>sudoku.proyect_50zo/proyect_50zo.HelloApplication</mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>

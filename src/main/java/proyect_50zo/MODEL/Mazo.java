@@ -1,6 +1,6 @@
-package sudoku.proyect_50zo.MODEL;
+package proyect_50zo.MODEL;
 
-import sudoku.proyect_50zo.EXCEPTION.MazoVacioException;
+import proyect_50zo.EXCEPTION.MazoVacioException;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;

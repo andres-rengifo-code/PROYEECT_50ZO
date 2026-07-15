@@ -1,4 +1,4 @@
-package sudoku.proyect_50zo.CONTROLLER;
+package proyect_50zo.CONTROLLER;
 
 import javafx.fxml.FXML;
 import javafx.geometry.Pos;
@@ -7,16 +7,16 @@ import javafx.scene.control.ChoiceDialog;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import sudoku.proyect_50zo.EXCEPTION.JugadaInvalidaException;
-import sudoku.proyect_50zo.EXCEPTION.MazoVacioException;
-import sudoku.proyect_50zo.EXCEPTION.TurnoInvalidoException;
-import sudoku.proyect_50zo.HILO.HiloDecisionMaquina;
-import sudoku.proyect_50zo.HILO.HiloTomaMaquina;
-import sudoku.proyect_50zo.MODEL.Carta;
-import sudoku.proyect_50zo.MODEL.Jugador;
-import sudoku.proyect_50zo.MODEL.Mazo;
-import sudoku.proyect_50zo.MODEL.Mesa;
-import sudoku.proyect_50zo.MODEL.OpcionJugada;
+import proyect_50zo.EXCEPTION.JugadaInvalidaException;
+import proyect_50zo.EXCEPTION.MazoVacioException;
+import proyect_50zo.EXCEPTION.TurnoInvalidoException;
+import proyect_50zo.HILO.HiloDecisionMaquina;
+import proyect_50zo.HILO.HiloTomaMaquina;
+import proyect_50zo.MODEL.Carta;
+import proyect_50zo.MODEL.Jugador;
+import proyect_50zo.MODEL.Mazo;
+import proyect_50zo.MODEL.Mesa;
+import proyect_50zo.MODEL.OpcionJugada;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;

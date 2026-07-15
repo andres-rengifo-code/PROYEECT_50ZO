@@ -1,4 +1,4 @@
-package sudoku.proyect_50zo.HILO;
+package proyect_50zo.HILO;
 
 import javafx.application.Platform;
 

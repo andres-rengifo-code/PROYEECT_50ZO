@@ -1,4 +1,4 @@
-package sudoku.proyect_50zo.EXCEPTION;
+package proyect_50zo.EXCEPTION;
 
 /**
  * Excepción <b>no marcada (unchecked)</b> propia del juego.

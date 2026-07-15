@@ -1,7 +1,7 @@
-package sudoku.proyect_50zo.HILO;
+package proyect_50zo.HILO;
 
 import javafx.application.Platform;
-import sudoku.proyect_50zo.MODEL.OpcionJugada;
+import proyect_50zo.MODEL.OpcionJugada;
 
 import java.util.List;
 import java.util.Random;

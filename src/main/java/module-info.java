@@ -3,12 +3,12 @@ module sudoku.proyect_50zo {
     requires javafx.fxml;
 
 
-    opens sudoku.proyect_50zo to javafx.fxml;
-    opens sudoku.proyect_50zo.CONTROLLER to javafx.fxml;
+    opens proyect_50zo to javafx.fxml;
+    opens proyect_50zo.CONTROLLER to javafx.fxml;
 
-    exports sudoku.proyect_50zo;
-    exports sudoku.proyect_50zo.CONTROLLER;
-    exports sudoku.proyect_50zo.MODEL;
-    exports sudoku.proyect_50zo.EXCEPTION;
-    exports sudoku.proyect_50zo.HILO;
+    exports proyect_50zo;
+    exports proyect_50zo.CONTROLLER;
+    exports proyect_50zo.MODEL;
+    exports proyect_50zo.EXCEPTION;
+    exports proyect_50zo.HILO;
 }

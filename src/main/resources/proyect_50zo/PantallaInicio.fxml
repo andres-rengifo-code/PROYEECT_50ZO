@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<StackPane style="-fx-background-color: #0a3d0a;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sudoku.proyect_50zo.CONTROLLER.PantallaInicioController">
+<StackPane style="-fx-background-color: #0a3d0a;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyect_50zo.CONTROLLER.PantallaInicioController">
 
     <VBox alignment="CENTER" spacing="10" style="-fx-padding: 30 40 30 40;">
 
