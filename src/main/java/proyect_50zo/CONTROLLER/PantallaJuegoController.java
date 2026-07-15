@@ -17,7 +17,8 @@ import proyect_50zo.MODEL.Jugador;
 import proyect_50zo.MODEL.Mazo;
 import proyect_50zo.MODEL.Mesa;
 import proyect_50zo.MODEL.OpcionJugada;
-
+import proyect_50zo.UTILS.InsertScene;
+import proyect_50zo.UTILS.Paths;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -341,8 +342,13 @@ public class PantallaJuegoController {
 
         List<OpcionJugada> opciones = actual.opcionesJugables(mesa.getSuma());
         if (opciones.isEmpty()) {
-            setMensaje(actual.getNombre() + " NO TIENE JUGADAS VÁLIDAS Y PASA EL TURNO");
-            avanzarTurno();
+
+            eliminarJugador(actual);
+
+            if (!jugadores.isEmpty()) {
+                comenzarTurno();
+            }
+
             return;
         }
 
@@ -388,4 +394,42 @@ public class PantallaJuegoController {
         turnoActual = (turnoActual + 1) % jugadores.size();
         comenzarTurno();
     }
+    /**
+     * HU-5. Elimina un jugador y devuelve sus cartas al mazo.
+     */
+    private void eliminarJugador(Jugador jugador) {
+
+        jugador.eliminar();
+
+        List<Carta> cartas = new ArrayList<>(jugador.getMano());
+
+        jugador.getMano().clear();
+
+        mazo.agregarYBarajar(cartas);
+
+        int indice = jugadores.indexOf(jugador);
+
+        jugadores.remove(jugador);
+
+        if (indice <= turnoActual && turnoActual > 0) {
+            turnoActual--;
+        }
+
+        setMensaje(jugador.getNombre() + " fue eliminado.");
+
+        verificarFinJuego();
+    }
+    /**
+     * HU-6. Finaliza la partida cuando queda un jugador.
+     */
+    private void verificarFinJuego() {
+
+        if (jugadores.size() == 1) {
+
+            PantallaFinalController.setGanador(jugadores.get(0).getNombre());
+
+            InsertScene.setScene(Paths.PANTALLAFINAL);
+        }
+    }
+
 }

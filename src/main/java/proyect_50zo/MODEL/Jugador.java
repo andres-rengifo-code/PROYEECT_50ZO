@@ -8,7 +8,7 @@ import java.util.List;
  * (4 cartas mientras haya cartas disponibles para reponer, según la
  * preparación del juego).
  */
-public class Jugador {
+public class    Jugador {
 
     private final String nombre;
     private final boolean esMaquina;
@@ -59,5 +59,21 @@ public class Jugador {
             }
         }
         return opciones;
+    }
+    private boolean eliminado = false;
+
+    /**
+     * HU-5. Indica si el jugador fue eliminado.
+     * @return true si el jugador fue eliminado.
+     */
+    public boolean estaEliminado() {
+        return eliminado;
+    }
+
+    /**
+     * HU-5. Marca el jugador como eliminado.
+     */
+    public void eliminar() {
+        eliminado = true;
     }
 }
