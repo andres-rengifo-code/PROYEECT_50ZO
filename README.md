@@ -24,4 +24,4 @@ Los jugadores van colocando cartas sobre la mesa sumando (o restando, según alg
  
 - Andrés Felipe Rengifo Rodriguez 202519613-2724
 - Álvaro Iván Ospina Capera
-- Juan Pablo
+- Juan Pablo Gómez Martínez 202518949-2724
