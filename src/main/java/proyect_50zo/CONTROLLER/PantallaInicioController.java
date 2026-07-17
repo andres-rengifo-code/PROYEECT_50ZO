@@ -10,6 +10,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import proyect_50zo.UTILS.Paths;
 
 import java.io.IOException;
 
@@ -86,7 +87,7 @@ public class PantallaInicioController {
         }
 
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/proyect_50zo/PantallaJuego.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(Paths.MESAJUEGO));
             Parent root = loader.load();
 
             PantallaJuegoController controller = loader.getController();
