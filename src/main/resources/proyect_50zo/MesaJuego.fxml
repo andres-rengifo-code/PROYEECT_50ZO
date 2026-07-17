@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<StackPane style="-fx-background-color: #0a3d0a;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyect_50zo.CONTROLLER.MesaJuegoController">
+    <VBox alignment="CENTER" spacing="15" style="-fx-padding: 24 30 24 30;">
+        <Label style="-fx-font-family: 'Impact'; -fx-font-size: 28px; -fx-text-fill: #f5c518;" text="EL CINCUENTAZO" />
+        <Label style="-fx-font-family: 'Courier New'; -fx-font-size: 12px; -fx-text-fill: #c9a227;" text="PREPARACIÓN DE LA PARTIDA" />
+        <HBox fx:id="maquinasBox" alignment="CENTER" spacing="28" />
+        <Label fx:id="labelCartasRestantes" style="-fx-font-family: 'Courier New'; -fx-font-size: 11px; -fx-text-fill: #bbbbbb;" text="MAZO BOCA ABAJO" />
+        <VBox alignment="CENTER" spacing="5" style="-fx-background-color: #0f1f0f; -fx-border-color: #c9a227; -fx-border-width: 2; -fx-padding: 12;">
+            <Label style="-fx-font-family: 'Courier New'; -fx-font-size: 11px; -fx-text-fill: #c9a227;" text="CARTA INICIAL EN LA MESA" />
+            <Label fx:id="cartaMesa" text="—" />
+        </VBox>
+        <Label style="-fx-font-family: 'Courier New'; -fx-font-size: 11px; -fx-text-fill: #c9a227;" text="TU MANO (BOCA ARRIBA)" />
+        <HBox fx:id="manoHumanoBox" alignment="CENTER" spacing="12" />
+        <Label fx:id="resumen" style="-fx-font-family: 'Courier New'; -fx-font-size: 11px; -fx-text-fill: #4caf81;" text="" />
+    </VBox>
+</StackPane>
